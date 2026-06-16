@@ -26,6 +26,7 @@ class ChatResponse(BaseModel):
   response: str
   thread_id: str
   model_used: str
+  security_notes: list[str]
   cached: bool = False
   processing_time_ms: float
   timestamp: str = Field(

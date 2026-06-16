@@ -1,0 +1,9 @@
+google-genai>=2.8.0
+langchain-google-genai>=4.2.5
+langgraph>=1.2.5
+langsmith>=0.8.15
+pydantic-settings>=2.14.1
+python-dotenv>=1.2.2
+slowapi>=0.1.10
+fastapi[standard]>=0.113.0
+pydantic>=2.8.0

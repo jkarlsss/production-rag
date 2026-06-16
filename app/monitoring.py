@@ -121,32 +121,4 @@ class RequestTimer:
       
     def __exit__(self, exc_type, exc_val, exc_tb):
         self.elapsed = (time.time() - self.start_time) * 1000
-        
-if __name__ == "__main__":
-  metrics = MetricsCollector()
-
-  # Simulate a successful query with a cache miss
-  with RequestTimer() as timer:
-      time.sleep(0.05) # simulate execution delay
-
-  metrics.record_request(
-      latency_ms=timer.elapsed,
-      is_error=False,
-      tokens_input=15,
-      tokens_output=45,
-      cache_hit=False
-  )
-
-  # Simulate a fast query with a cache hit
-  with RequestTimer() as timer:
-      pass
-
-  metrics.record_request(
-      latency_ms=timer.elapsed,
-      is_error=False,
-      tokens_input=15,
-      tokens_output=45,
-      cache_hit=True
-  )
-
-  print(json.dumps(metrics.summary, indent=2))
+    

@@ -14,9 +14,10 @@ class Settings(BaseSettings):
   fallback_model: str = "gemini-3.0-flash-preview"
   
   # LangSmith
-  langsmith_tracing: bool = True
-  langsmith_api_key: str = ""
+  langchain_tracing_v2: bool = True
+  langchain_api_key: str = ""
   langsmith_project: str = "Rag Production"
+  langsmith_endpoint: str = "https://api.smith.langchain.com"
   
   # Application
   app_env: str = "development"
