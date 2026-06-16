@@ -145,6 +145,7 @@ async def chat(request: Request, body: ChatRequest):
         response=cached_response,
         thread_id=body.thread_id,
         model_used="cache",
+        security_notes=security_notes,
         cached=True,
         processing_time_ms=0
       )
